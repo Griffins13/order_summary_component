@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    padding: 10px;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    max-width: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 10px 10px 15px hsla(245, 62%, 55%, 0.368);
+}
+.text-content{
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+.title{
+    color: hsl(223, 47%, 23%);
+    font-weight: 800;
+    font-size: 28px;
+    margin: 20px;
+}
+.text{
+    color: rgb(112, 130, 151);
+    font-weight: 600;
+    line-height: 150%;
+    padding: 0px 5px;
+    margin: 20px;
+}
+.plan-type>h4{
+    color: hsl(223, 47%, 23%);
+}
+.plan-type>p{
+    color: rgb(112, 130, 151);
+}
+.plan-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(225, 100%, 98%);
+    padding: 25px;
+    margin: 20px;
+    border-radius: 15px;
+}
+.plan-type{
+    margin-left: 20px;
+    text-align: left;
+}
+.plan-name{
+    font-weight: 900;
+    font-size: 14px;
+    margin: 5px;
+}
+.plan-cost{
+    font-weight: 600;
+    font-size: 16px;
+    margin: 5px;
+}
+.payment-box{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.change{
+    color: hsl(245, 75%, 52%);
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: auto;
+}
+button.proceed{
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 10px hsla(245, 62%, 55%, 0.368);
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+}
+button.cancel{
+    background-color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    color: #1f2f56a8;
+    font-size: 14px;
+    font-weight: 900;
+}
+/* Active states */
+.change:hover{
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.7);
+}
+.proceed:hover{
+    background-color: hsla(245, 75%, 52%, 0.7);
+    transition: 150ms ease-in;
+    cursor: pointer;
+}
+.cancel:hover{
+    color: rgb(29, 29, 29);
+    transition: 150ms ease-in;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        background-image: url("images/pattern-background-mobile.svg");
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 35px 15px;
+        max-width: 375px;
+    }
+    .hero{
+        max-width: 345px;
+    }
+    .title{
+        font-size: 22px;
+    }
+    .text{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 200%;
+    }
+    .payment-box{
+        margin: 10px;
+    }
+    .plan-box{
+        padding: 15px;
+        margin: 10px;
+    }
+    .plan-name,.plan-cost{
+        font-size: 14px;
+    }
+    .plan-type{
+        margin-left: 10px;
+    }
+    .change{
+        font-size: 12px;
+    }
+    button.proceed,button.cancel{
+        margin-top: 15px;
+    }
+}
